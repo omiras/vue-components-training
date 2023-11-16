@@ -5,7 +5,7 @@ defineProps(['min', 'max'])
 <template>
     <div>
         <!-- Corrregir 13:51. calucular un número aleatorio entre min y max y colocarlo donde la Z -->
-        Random value between {{ min }} and {{ max }} => {{ parseInt(Math.random() * max + min) }}
+        Random value between {{ min }} and {{ max }} => {{ Math.floor(Math.random() * (max - min + 1)) + min }}
     </div>
 </template>
 
