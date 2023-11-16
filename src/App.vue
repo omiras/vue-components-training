@@ -1,4 +1,7 @@
 <script setup>
+
+import { ref, computed } from 'vue';
+
 import IdCard from './components/IdCard.vue'
 import Random from './components/Random.vue'
 import BoxColor from './components/BoxColor.vue'

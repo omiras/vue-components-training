@@ -1,19 +1,8 @@
 <script setup>
 
+import { rgbToHex } from '../util';
+
 defineProps(['r', 'g', 'b'])
-
-function rgbToHex(r, g, b) {
-    const componentToHex = (c) => {
-        const hex = c.toString(16);
-        return hex.length === 1 ? '0' + hex : hex;
-    };
-
-    const red = componentToHex(r);
-    const green = componentToHex(g);
-    const blue = componentToHex(b);
-
-    return '#' + red + green + blue;
-}
 
 function whiteOrBlack(r, g, b) {
     if (r < 128 || g < 128 || b < 128) {
