@@ -5,11 +5,15 @@ import { ref, computed } from 'vue';
 import IdCard from './components/IdCard.vue'
 import Random from './components/Random.vue'
 import BoxColor from './components/BoxColor.vue'
+import LikeButton from './components/LikeButton.vue';
 </script>
 
 <template>
   <h1>Creación de componentes con Vue</h1>
   <section>
+
+    <LikeButton />
+    <LikeButton />
     <h2>BoxColor</h2>
     <BoxColor :r="255" :g="0" :b="0" />
     <BoxColor :r="128" :g="255" :b="0" />
