@@ -6,12 +6,16 @@ import IdCard from './components/IdCard.vue'
 import Random from './components/Random.vue'
 import BoxColor from './components/BoxColor.vue'
 import LikeButton from './components/LikeButton.vue';
+import Carousel from './components/Carousel.vue'
 </script>
 
 <template>
   <h1>Creación de componentes con Vue</h1>
   <section>
-
+    <h2>Carousel</h2>
+    <Carousel :images="['https://randomuser.me/api/portraits/women/1.jpg'
+      , 'https://randomuser.me/api/portraits/men/1.jpg', 'https://randomuser.me/api/portraits/women/2.jpg'
+      , 'https://randomuser.me/api/portraits/men/2.jpg']" />
     <LikeButton />
     <LikeButton />
     <h2>BoxColor</h2>
