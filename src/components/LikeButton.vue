@@ -22,7 +22,7 @@ const incrementLikes = () => {
     <!-- La directiva v-on sirve para gestionar los eventos. Lo que hace este código es que al hacer click en el botón, incrementamos la variable de estado 'likes'-->
 
     <!-- La directiva v-bind sirve para hacer cualquier atributo dinámico. El valor del atributo pasa a ser una expresión JavaScript-->
-    <button v-bind:style="{ backgroundColor: colors[likes % colors.length] }" v-on:click="incrementLikes">{{ likes }}
+    <button v-bind:style="{ backgroundColor: colors[likes.value % colors.length] }" v-on:click="incrementLikes">{{ likes }}
         Likes</button>
 </template>
 
