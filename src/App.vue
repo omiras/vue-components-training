@@ -1,5 +1,6 @@
 <script setup>
 import BoxColor from './components/BoxColor.vue';
+import CreditCard from './components/CreditCard.vue';
 import IdCard from './components/IdCard.vue';
 import Random from './components/Random.vue';
 </script>
@@ -13,6 +14,8 @@ import Random from './components/Random.vue';
   <Random :min="1" :max="10"></Random>
   <h3>RGB Color</h3>
   <BoxColor :r="255" :g="0" :b="0" />
+  <h3>Credit Card</h3>
+  <CreditCard type="visa" bg-color="#11aa99" number="0123456789018845" :expiration-month="3" :expiration-year="2021" bank="N26" owner="Maxenne Bourete"/>
 </template>
 
 <style scoped></style>
