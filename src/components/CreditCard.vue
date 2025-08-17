@@ -16,7 +16,7 @@ import visa from '../assets/images/visa.png'
 import masterCard from '../assets/images/master-card.svg'
 
 
-const getLogo = computed(()=> {
+const formatLogo = computed(()=> {
     return props.type == 'visa' ? visa: masterCard
 })
 
@@ -36,7 +36,7 @@ const formatDate = computed(() => {
 
 <template>
     <div class="card" :style="{backgroundColor: bgColor}">
-            <img :src="getLogo" alt="">
+            <img :src="formatLogo" alt="">
             <div class="card__number">{{ formatNumber }}</div>
             <div class="card__info">
                 <div class="card__expiration">Expires {{ formatDate }} <span class="card__bank">{{ bank }}</span></div>
