@@ -21,10 +21,12 @@ function rgbToHex(r, g, b) {
     return "#" + (1 << 24 | r << 16 | g << 8 | b).toString(16).slice(1);
 }
 
+// getHexColor. Por convención, no se utiliza verbos como getHexColor para definir computed properties. 
 const stringHex = computed(()=> {
     return rgbToHex(props.r, props.g, props.b)
 })
 
+// getRGB
 const stringRGB = computed(() => {
     return `rgb(${props.r}, ${props.g}, ${props.b})`
 })
