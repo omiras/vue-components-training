@@ -4,8 +4,14 @@
 defineProps({
     lastName: String,
     firstName: String,
-    height: Number,
-    gender: String, //male, female, non-binary
+    height: {
+        type: Number,
+        validator: value => value > 0
+    },
+    gender: {
+        type: String,
+        validator: value => ['male', 'female'].includes(value)
+    },
     picture: String,
     birth: Date
 })
