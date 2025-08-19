@@ -4,6 +4,8 @@
 <script setup>
 import { ref } from 'vue'; 
 import IdCard from './components/IdCard.vue';
+import BoxColor from './components/BoxColor.vue';
+
 import catPicture from './assets/images/gato.png'
 
 const mariaHeight = ref(199)
@@ -23,7 +25,9 @@ const mariaHeight = ref(199)
       picture="https://randomuser.me/api/portraits/women/44.jpg" />
    <IdCard last-name='Garcia' first-name='Loki' gender='male' :height="172" :birth="new Date('1988-05-11')"
       :picture="catPicture" />
-  
+   <h2>Box Color</h2>
+   <BoxColor :r="255" :g="0" :b="0" />
+
   </div>
 </template>
 
