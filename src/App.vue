@@ -27,6 +27,8 @@ const mariaHeight = ref(199)
       :picture="catPicture" />
    <h2>Box Color</h2>
    <BoxColor :r="255" :g="0" :b="0" />
+      <BoxColor :r="0" :g="255" :b="0" />
+
 
   </div>
 </template>
