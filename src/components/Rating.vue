@@ -11,7 +11,7 @@ const fillStarts = computed(()=> {
 })
 
 const emptyStars = computed(()=> {
-    return Math.floor(5 - props.rate)
+    return 5 - fillStarts.value
 })
 
 </script>
