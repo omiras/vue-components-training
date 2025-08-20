@@ -2,6 +2,7 @@
 import BoxColor from './components/BoxColor.vue';
 import CreditCard from './components/CreditCard.vue';
 import IdCard from './components/IdCard.vue';
+import LikeButton from './components/LikeButton.vue';
 import Random from './components/Random.vue';
 import Rating from './components/Rating.vue';
 
@@ -27,6 +28,8 @@ import Rating from './components/Rating.vue';
   <Rating :rate="3" />
   <Rating :rate="4" />
   <Rating :rate="5" />
+  <h3>Button Like</h3>
+  <LikeButton />
 </template>
 
 <style scoped></style>
