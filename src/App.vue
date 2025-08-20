@@ -5,6 +5,7 @@
 import { ref } from 'vue';
 import IdCard from './components/IdCard.vue';
 import BoxColor from './components/BoxColor.vue';
+import Carousel from './components/Carousel.vue';
 
 import catPicture from './assets/images/gato.png'
 import LikeButton from './components/LikeButton.vue';
@@ -18,7 +19,17 @@ const mariaHeight = ref(199)
   <div>
     <h1>Creación de componentes con Vue</h1>
     <p>Crea a continuación todos los componentes del ejercicio.</p>
- <h2>Like Button</h2>
+
+    <h2>Carousel</h2>
+    <Carousel :images="[
+      'https://randomuser.me/api/portraits/women/1.jpg',
+      'https://randomuser.me/api/portraits/men/1.jpg',
+      'https://randomuser.me/api/portraits/women/2.jpg',
+      'https://randomuser.me/api/portraits/men/2.jpg'
+    ]" />
+
+
+    <h2>Like Button</h2>
     <LikeButton />
 
     <h2>1-Id Card</h2>
@@ -34,7 +45,7 @@ const mariaHeight = ref(199)
     <BoxColor :r="255" :g="0" :b="0" />
     <BoxColor :r="0" :g="255" :b="0" />
 
-   
+
   </div>
 </template>
 
