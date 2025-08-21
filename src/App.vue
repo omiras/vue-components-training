@@ -66,6 +66,7 @@ const handleKeyPress = (keyPressed) => {
     <TwoButtons @operation="(v)=> counter += v " @reset="counter = 0" />
     <p>Este es mi contador : {{ counter }}</p>
   </div>
+  
 </template>
 
 <!-- Estilos. Con el modificador "scoped" permite que estos estilos solo se apliquen a este componente -->
