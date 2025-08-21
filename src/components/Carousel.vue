@@ -46,4 +46,8 @@ const setPrevImage = () => {
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+button {
+    background-color: aqua;
+}
+</style>
