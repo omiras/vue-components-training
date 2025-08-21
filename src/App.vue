@@ -11,6 +11,7 @@ import catPicture from './assets/images/gato.png'
 import LikeButton from './components/LikeButton.vue';
 import KeyButton from './components/KeyButton.vue';
 import TwoButtons from './components/TwoButtons.vue';
+import SingleColorPicker from './components/SingleColorPicker.vue';
 
 const mariaHeight = ref(199)
 const pressedKey = ref("")
@@ -65,6 +66,9 @@ const handleKeyPress = (keyPressed) => {
     <h2>Otro ejemplo para usar eventos des de el hijo</h2>
     <TwoButtons @operation="(v)=> counter += v " @reset="counter = 0" />
     <p>Este es mi contador : {{ counter }}</p>
+
+    <h3>Single Color Picker</h3>
+    <SingleColorPicker color="r" :value="155"/>
   </div>
   
 </template>
