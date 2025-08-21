@@ -6,6 +6,7 @@ const props = defineProps(['color', 'value'])
 const localValue = ref(0)
 
 onMounted(()=> {
+    // Valor inicial de la variable de estado que nos proporciona el usuario
     localValue.value = props.value
 })
 
