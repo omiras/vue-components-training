@@ -10,10 +10,12 @@ import Carousel from './components/Carousel.vue';
 import catPicture from './assets/images/gato.png'
 import LikeButton from './components/LikeButton.vue';
 import KeyButton from './components/KeyButton.vue';
+import TwoButtons from './components/TwoButtons.vue';
 
 const mariaHeight = ref(199)
 const pressedKey = ref("")
 const textFromUser = ref("")
+const counter = ref(0)
 
 const handleKeyPress = (keyPressed) => {
   textFromUser.value += keyPressed
@@ -60,6 +62,9 @@ const handleKeyPress = (keyPressed) => {
     <br>
     <label for="">Texto escrito por el usuario:</label>
     <input v-model="textFromUser" type="text">
+    <h2>Otro ejemplo para usar eventos des de el hijo</h2>
+    <TwoButtons @operation="(v)=> counter += v " @reset="counter = 0" />
+    <p>Este es mi contador : {{ counter }}</p>
   </div>
 </template>
 
