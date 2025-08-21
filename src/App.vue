@@ -9,8 +9,15 @@ import Carousel from './components/Carousel.vue';
 
 import catPicture from './assets/images/gato.png'
 import LikeButton from './components/LikeButton.vue';
+import KeyButton from './components/KeyButton.vue';
 
 const mariaHeight = ref(199)
+const pressedKey = ref("")
+const textFromUser = ref("")
+
+const handleKeyPress = (keyPressed) => {
+  textFromUser.value += keyPressed
+}
 
 </script>
 
@@ -45,7 +52,14 @@ const mariaHeight = ref(199)
     <BoxColor :r="255" :g="0" :b="0" />
     <BoxColor :r="0" :g="255" :b="0" />
 
-
+    <!-- https://vuejs.org/guide/essentials/component-basics.html#listening-to-events-->
+    <h2>Ejemplo de un hijo que emite eventos al padre </h2>
+    <!-- Escuchar el evento @press -->
+    <KeyButton @press="handleKeyPress" label="A" />
+    <KeyButton @press="handleKeyPress" label="B" />
+    <br>
+    <label for="">Texto escrito por el usuario:</label>
+    <input v-model="textFromUser" type="text">
   </div>
 </template>
 
