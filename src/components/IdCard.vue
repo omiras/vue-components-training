@@ -25,7 +25,7 @@ defineProps({
   <div class="container">
     <img :src="picture" alt="">
     <div>
-        <p><strong>First name: </strong>{{ firstName.toUpperCase() }}</p>
+        <p><strong> {{ $t('name.firstName') }}: </strong>{{ firstName.toUpperCase() }}</p>
         <p><strong>Last name: </strong>{{ lastName }}</p>
         <p><strong>Height: </strong> {{ height / 100 }}m</p>
         <p><strong>Gender: </strong> {{ gender }}</p>

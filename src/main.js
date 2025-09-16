@@ -5,17 +5,19 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 const i18n = createI18n({
-  locale: 'ja',
+  locale: 'en',
   fallbackLocale: 'en',
   messages: {
     en: {
-      message: {
-        hello: 'hello world'
+      title: 'Creating components with Vue',
+      name: {
+        firstName: 'First Name'
       }
     },
-    ja: {
-      message: {
-        hello: 'こんにちは、世界'
+    es: {
+      title: 'Creación de componentes con Vue',
+      name: {
+        firstName: 'Nombre'
       }
     }
   }

@@ -12,6 +12,7 @@ import LikeButton from './components/LikeButton.vue';
 import KeyButton from './components/KeyButton.vue';
 import TwoButtons from './components/TwoButtons.vue';
 import SingleColorPicker from './components/SingleColorPicker.vue';
+import SelectLanguage from './components/SelectLanguage.vue';
 
 const mariaHeight = ref(199)
 const pressedKey = ref("")
@@ -27,9 +28,9 @@ const handleKeyPress = (keyPressed) => {
 <!-- HTML y directivas Vue -->
 <template>
   <div>
-    <h1>Creación de componentes con Vue</h1>
+    <h1>{{ $t('title') }}</h1>
     <p>Crea a continuación todos los componentes del ejercicio.</p>
-
+    <SelectLanguage />
     <h2>Carousel</h2>
     <Carousel :images="[
       'https://randomuser.me/api/portraits/women/1.jpg',
